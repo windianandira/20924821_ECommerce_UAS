@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Celana Jeans Slim Fit</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <h1>dorbi<span class="shop-highlight">shop.</span></h1>
+    <nav>
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="produk.html">Produk</a></li>
+        <li><a href="kontak.html">Kontak</a></li>
+      </ul> 
+      <a href="keranjang.html" class="cart-icon">
+        <img src="images/shopping-cart.svg" alt="Keranjang" class="keranjang-icon">
+        <span id="cart-count">0</span>
+      </a>
+    </nav>
+  </header>
+
+<section>
+  <div class="produk-detail">
+    <h3>Celana Jeans Slim Fit</h3>
+    <img src="images/jeans.jpg" alt="Celana Jeans" width="250">
+    <p>Celana jeans slim fit kami dirancang khusus untuk kamu yang ingin tampil modern dan maskulin. Potongannya mengikuti bentuk kaki tanpa terlalu ketat, sehingga tetap nyaman digunakan sepanjang hari. Terbuat dari bahan denim stretch berkualitas tinggi, celana ini fleksibel dan kuat, cocok untuk aktivitas harian maupun hangout santai.</p>
+    <p class="harga">Rp 130.000</p>
+    <button class="beli-button" onclick="tambahKeKeranjangDetail(event)">Tambah ke Keranjang</button>
+    <a href="produk-chino.html" class="navigasi-next-button">Produk Berikutnya →</a>
+  </div>
+</section>
+
+  <footer>
+    <h2>Hubungi Kami</h2>
+    <div class="kontak-list">
+      <a href="https://www.instagram.com/support_your_local_product" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" />
+        <span>@dorbishop.id</span>
+      </a>
+      <a href="https://wa.me/6281380407855" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
+        <span>+62 813-8040-7855</span>
+      </a>
+      <a href="https://www.facebook.com" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" />
+        <span>dorbishop official</span>
+      </a>
+    </div>
+    <p style="margin-top: 2rem;">&copy; 2025 dorbishop. Hak Cipta Dilindungi.</p>
+  </footer>
+
+  <div id="popup-notif" class="popup-notif">Produk berhasil ditambahkan ke keranjang</div>
+
+  <script src="js/script.js"></script>
+
+</body>
+</html>

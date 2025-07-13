@@ -8,7 +8,7 @@
 body {
   font-family: 'inter', sans-serif;
   line-height: 1.6;
-  background-color: #f4f4f4;
+  background: linear-gradient(to right, #e6f0f8, #d6ecf3);
   color: #333;
   margin: 0;
   padding: 0;
@@ -23,6 +23,9 @@ header {
 
 header h1 {
   margin-bottom: 0.5rem;
+}
+header h1 span.shop-highlight {
+  color: #66d9f0; /* biru muda */
 }
 
 /* === NAVIGASI DESKTOP === */
@@ -101,9 +104,62 @@ main {
   margin-top: 2rem;
 }
 
-h2 {
-  margin-bottom: 1rem;
+/* Kontak modern style */
+
+#kontak {
+  margin-top: 1rem;
+  padding: 2rem 1rem;
+  background: transparent; /* hilangkan background */
+  border-radius: 0;
+  box-shadow: none;
+  text-align: center;
 }
+
+#kontak h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+}
+
+.kontak-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.kontak-list a {
+  background: white;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+  color: #2c3e50;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  min-width: 250px;
+}
+
+.kontak-list a:hover {
+  background-color: #2c3e50;
+  color: white;
+  transform: translateY(-5px);
+}
+
+.kontak-list img {
+  width: 36px;
+  height: 36px;
+  transition: transform 0.3s ease;
+}
+
+.kontak-list a:hover img {
+  transform: scale(1.1);
+}
+
 
 .produk-list {
   display: grid;
@@ -122,6 +178,20 @@ h2 {
   min-height: 100%;
   transition: transform 0.3s ease;
 }
+
+.produk-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 2rem auto;
+  text-align: center;
+}
+
 
 .produk:hover {
   transform: translateY(-4px);
@@ -153,6 +223,14 @@ h2 {
 .produk p {
   font-weight: 400;
 }
+
+.produk img {
+  max-height: 220px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
 .harga {
   font-weight: bold;
   color: #f0473b;
@@ -166,10 +244,35 @@ h2 {
   border-radius: 4px;
   cursor: pointer;
   font-size: 0.9rem;
+  transition: background-color 0.3s ease;
 }
 
 .beli-button:hover {
   background-color: #219150;
+}
+
+.navigasi-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+  width: 100%;
+}
+
+.navigasi-back-button,
+.navigasi-next-button {
+  background-color: #e79818;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
+
+.navigasi-back-button:hover,
+.navigasi-next-button:hover {
+  background-color: #d35400;
 }
 
 .popup-notif {
@@ -196,58 +299,125 @@ section {
   margin-bottom: 3rem;
 }
 
+/* Kategori Index */
 #kategori {
   margin-top: 2rem;
-  background: rgba(132, 203, 231, 0.315);
-  padding: 2rem;
-  border-radius: 8px;
+  background: linear-gradient(135deg, #c3ecff, #eaf9ff);
+  padding: 3rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+#kategori h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #2c3e50;
 }
 
 #kategori ul {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
-  list-style: none;
-  padding: 0;
-  margin: 1rem 0 0 0;
+  gap: 1.25rem;
   justify-content: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
 #kategori li {
-  background-color: #3498db;
-  color: white;
-  padding: 0.75rem 1.25rem;
-  border-radius: 5px;
+  background: #ffffff;
+  color: #2c3e50;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
   font-weight: 600;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
 #kategori li:hover {
-  background-color: #2980b9;
+  background-color: #2c3e50;
+  color: white;
   transform: scale(1.05);
 }
 
-#tentang-kami {
-  margin-top: 2rem;
-  background: rgba(132, 203, 231, 0.315);
-  padding: 3rem;
-  border-radius: 8px;
+/* Tentang Toko Index */
+#tentang-toko {
+  margin-top: 3rem;
+  padding: 3rem 1.5rem;
+  background: linear-gradient(135deg, #f1f9ff, #e6f0f8);
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  text-align: center;
 }
+
+.tentang-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#tentang-toko h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+#tentang-toko p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.btn-lihat-produk {
+  display: inline-block;
+  margin-top: 1rem;
+  background-color: #2c3e50;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-lihat-produk:hover {
+  background-color: #1a8f6e;
+}
+
 
 footer {
   background-color: #2c3e50;
   color: white;
   text-align: center;
-  padding: 1rem;
+  padding: 1rem 0.5rem;
   margin-top: 2rem;
 }
+footer h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
 
 /* === RESPONSIVE PONSEL === */
 
 @media (max-width: 768px) {
   .hamburger {
     display: block;
+  }
+  #tentang-toko h2 {
+    font-size: 1.5rem;
+  }
+
+  #tentang-toko p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .btn-lihat-produk {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
   }
 
   .nav-menu {
@@ -293,6 +463,44 @@ footer {
     flex-direction: column;
     align-items: center;
   }
+
+  .kontak-list a {
+    min-width: 200px;
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .kontak-list img {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+/*Form Kontak*/
+.kontak-form { 
+  display: flex; 
+  flex-direction: column; 
+  max-width: 500px; 
+  margin: auto; 
+}
+.kontak-form input, .kontak-form textarea { 
+  padding: 0.75rem; 
+  margin-bottom: 1rem; 
+  border: 1px solid #ccc; 
+  border-radius: 6px; 
+  font-size: 1rem; 
+}
+.kontak-form button { 
+  padding: 0.75rem; 
+  background-color: #2c3e50; 
+  color: white; 
+  border: none; 
+  border-radius: 6px; 
+  cursor: pointer; 
+  font-weight: bold; 
+}
+.kontak-form button:hover { 
+  background-color: #1a8c68; 
 }
 
 /*===TABLET RESPONSIVE===*/
@@ -308,7 +516,7 @@ footer {
   .nav-menu {
     gap: 1.25rem;
   }
-
+}
   h1 {
     font-size: 2rem;
   }
@@ -324,7 +532,6 @@ footer {
   body {
     font-size: 1rem;
   }
-}
 
 /*===DESKTOP RESPONSIVE===*/
 @media (min-width: 1200px) {

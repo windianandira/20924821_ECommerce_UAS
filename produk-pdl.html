@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Celana Pdl Army</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <h1>dorbi<span class="shop-highlight">shop.</span></h1>
+    <nav>
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="produk.html">Produk</a></li>
+        <li><a href="kontak.html">Kontak</a></li>
+      </ul>
+      <a href="keranjang.html" class="cart-icon">
+        <img src="images/shopping-cart.svg" alt="Keranjang" class="keranjang-icon">
+        <span id="cart-count">0</span>
+      </a>
+    </nav>
+  </header>
+
+<section>
+  <div class="produk-detail">
+    <h3>Celana PDL Army</h3>
+    <img src="images/pdl-army.jpg" alt="Celana Pdl" width="250">
+    <p>Tampil gagah dan siap tempur dengan celana PDL army dari dorbishop. Terinspirasi dari desain militer, celana ini dibuat dari bahan ripstop atau drill tebal yang tahan gesekan dan cocok untuk pemakaian intens. Desain tactical dengan jahitan kuat, saku besar, dan bagian lutut yang fleksibel memberikan kenyamanan ekstra.</p>
+    <p class="harga">Rp 180.000</p>
+    <button class="beli-button" onclick="tambahKeKeranjangDetail(event)">Tambah ke Keranjang</button>
+    <div class="navigasi-container">
+  <a href="produk-cargo.html" class="navigasi-back-button">← Sebelumnya</a>
+  <a href="produk-jogger.html" class="navigasi-next-button">Berikutnya →</a>
+</div>
+  </div>
+</section>
+
+
+  <footer>
+    <h2>Hubungi Kami</h2>
+    <div class="kontak-list">
+      <a href="https://www.instagram.com/support_your_local_product" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" />
+        <span>@dorbishop.id</span>
+      </a>
+      <a href="https://wa.me/6281380407855" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
+        <span>+62 813-8040-7855</span>
+      </a>
+      <a href="https://www.facebook.com" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" />
+        <span>dorbishop official</span>
+      </a>
+    </div>
+    <p style="margin-top: 2rem;">&copy; 2025 dorbishop. Hak Cipta Dilindungi.</p>
+  </footer>
+
+  <div id="popup-notif" class="popup-notif">Produk berhasil ditambahkan ke keranjang</div>
+
+  <script src="js/script.js"></script>
+
+</body>
+</html>

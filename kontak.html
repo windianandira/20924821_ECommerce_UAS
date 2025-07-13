@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Beranda - dorbishop</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <title>Kontak Kami - dorbishop</title>
+  <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -25,19 +25,23 @@
     </nav>
   </header>
 
-<main>
-  <div class="container">
-<section id="tentang-toko">
-  <div class="tentang-wrapper">
-    <h2>Selamt Datang di dorbishop 👋</h2>
-    <p><strong>dorbishop</strong> adalah toko fashion pria yang menghadirkan berbagai pilihan celana berkualitas — dari jeans, chino, cargo, hingga PDL dan jogger. Kami mengutamakan kenyamanan dan desain kekinian agar kamu tampil percaya diri dalam setiap aktivitas.</p>
-    <p>Belanja lebih mudah, aman, dan menyenangkan bersama kami. Temukan gaya terbaikmu sekarang juga!</p>
-    <a href="produk.html" class="btn-lihat-produk">Lihat Produk Sekarang →</a>
-  </div>
-</section>
+  <main class="container">
+    <section id="form-kontak">
+      <h2>Formulir Kontak</h2>
+      <form class="kontak-form">
+        <label for="nama">Nama</label>
+        <input type="text" id="nama" name="nama" placeholder="Masukkan nama Anda" required>
 
-  </div>
-</main>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Masukkan email Anda" required>
+
+        <label for="pesan">Pesan</label>
+        <textarea id="pesan" name="pesan" rows="5" placeholder="Tulis pesan Anda di sini..." required></textarea>
+
+        <button type="submit" class="beli-button">Kirim Pesan</button>
+      </form>
+    </section>
+  </main>
 
   <footer>
     <section id="kontak">
@@ -61,6 +65,5 @@
   </footer>
 
   <script src="js/script.js"></script>
-  <div id="popup-notif" class="popup-notif">Produk berhasil ditambahkan ke keranjang</div>
 </body>
 </html>
